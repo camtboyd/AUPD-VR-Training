@@ -21,7 +21,7 @@ public class UtilityBelt : MonoBehaviour
     {
         CalculateAvgForwardVector();
         belt.transform.forward = avgForwardVector;
-        transform.position = new Vector3(GetComponent<Camera>().transform.position.x, transform.position.y, GetComponent<Camera>().transform.position.z);
+        transform.position = new Vector3(cameraObj.GetComponent<Camera>().transform.position.x, transform.position.y, cameraObj.GetComponent<Camera>().transform.position.z);
     }
 
     public Vector3 avgForwardVector 
@@ -37,7 +37,7 @@ public class UtilityBelt : MonoBehaviour
         float z = (left_hand.transform.forward.z + right_hand.transform.forward.z) / 2;
 
         _avgForwardVector.x = x;
-        _avgForwardVector.y = y;
+        _avgForwardVector.y = transform.forward.y;
         _avgForwardVector.z = z;
 
 

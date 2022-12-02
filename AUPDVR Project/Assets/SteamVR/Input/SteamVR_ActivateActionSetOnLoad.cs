@@ -27,7 +27,6 @@ namespace Valve.VR
             {
                 //Debug.Log(string.Format("[SteamVR] Activating {0} action set.", actionSet.fullPath));
                 actionSet.Activate(forSources, initialPriority, disableAllOtherActionSets);
-
             }
         }
 

@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &18147208 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8753866279049952383, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-  m_PrefabInstance: {fileID: 1224027010}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029103430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45983c256a3daee459459a9fa70be1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &46620048
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,26 +172,28 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.038594306
   m_Center: {x: 0, y: 0, z: -0.00060874224}
---- !u!1 &123154125 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-  m_PrefabInstance: {fileID: 1224027010}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &123154128
+--- !u!114 &58590575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123154125}
+  m_GameObject: {fileID: 58590571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5644e87fbf00ba149a2500ea958c641a, type: 3}
+  m_Script: {fileID: 11500000, guid: 45983c256a3daee459459a9fa70be1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left_hand: {fileID: 2029103430}
-  right_hand: {fileID: 1266312625}
-  belt: {fileID: 1459196654}
+  grabAction:
+    actionPath: /actions/default/in/GrabGrip
+    needsReinit: 0
+  handType: 2
+  isPressed: 0
+--- !u!1 &123154125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 1224027010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &126421378
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,8 +742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneChanger: {fileID: 462684564}
-  triggerLeft: {fileID: 18147208}
-  triggerRight: {fileID: 2045610370}
+  triggerLeft: {fileID: 1915941370}
+  triggerRight: {fileID: 58590575}
 --- !u!1 &462684564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,10 +2107,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298763034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717083fd44fc1df438c2d00bffa2b99a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5644e87fbf00ba149a2500ea958c641a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1224027011}
+  left_hand: {fileID: 2029103430}
+  right_hand: {fileID: 1266312625}
+  belt: {fileID: 1459196654}
+  cameraObj: {fileID: 1224027011}
 --- !u!1 &1373086301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,8 +2494,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spot: {fileID: 46620048}
   Weapon: {fileID: 1150539787}
-  triggerLeft: {fileID: 18147208}
-  triggerRight: {fileID: 2045610370}
+  triggerLeft: {fileID: 0}
+  triggerRight: {fileID: 0}
   LeftHand: {fileID: 2064063031}
   RightHand: {fileID: 1429967097}
   Belt: {fileID: 1459196654}
@@ -2886,22 +2880,28 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.036958218
   m_Center: {x: 0, y: 0, z: 0.0022392273}
---- !u!1 &2029103430 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 144230, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-  m_PrefabInstance: {fileID: 1224027010}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2045610370 stripped
+--- !u!114 &1915941370
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7730778127697085368, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-  m_PrefabInstance: {fileID: 1224027010}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266312625}
+  m_GameObject: {fileID: 1915941366}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45983c256a3daee459459a9fa70be1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabAction:
+    actionPath: /actions/default/in/GrabGrip
+    needsReinit: 0
+  handType: 1
+  isPressed: 0
+--- !u!1 &2029103430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 144230, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 1224027010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2064063031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000014277073068, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
