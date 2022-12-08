@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46620048}
   m_LocalRotation: {x: -0.59347695, y: 0.60706764, z: 0.39083642, w: -0.3556698}
-  m_LocalPosition: {x: 0.305, y: -0.09600002, z: -0.043000184}
+  m_LocalPosition: {x: 0.305, y: -0.096, z: -0.043}
   m_LocalScale: {x: 0.4909199, y: 0.49091995, z: 0.49092}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,7 +167,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58590571}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.038594306
@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3940926764672689676, guid: 750beadca50375d4aaeb8ad375284bf7, type: 3}
       propertyPath: m_Name
-      value: Pistol 92 White
+      value: Pistol
       objectReference: {fileID: 0}
     - target: {fileID: 9131621325940345405, guid: 750beadca50375d4aaeb8ad375284bf7, type: 3}
       propertyPath: m_Enabled
@@ -325,15 +325,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 32b149e97519f4d41b7c5a403dd1f3cd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2882b3c24d269cf4aaabb309e1cebae8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.23
+  m_Volume: 0.179
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 94
+  Priority: 26
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -386,7 +386,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.18888889
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1325,6 +1325,7 @@ GameObject:
   - component: {fileID: 744531210}
   - component: {fileID: 744531209}
   - component: {fileID: 744531208}
+  - component: {fileID: 744531211}
   m_Layer: 0
   m_Name: Spray Zone
   m_TagString: Untagged
@@ -1340,7 +1341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744531206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.097999975, y: -0.275, z: 0.037000265}
+  m_LocalPosition: {x: 0.04, y: -0.275, z: 0.037000265}
   m_LocalScale: {x: 0.31057, y: 0.31057, z: 0.31057}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1410,6 +1411,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744531206}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &744531211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744531206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2430270d5087270498b24a6db483d5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spot: {fileID: 126421378}
+  Weapon: {fileID: 1373086301}
+  triggerLeft: {fileID: 1915941370}
+  triggerRight: {fileID: 58590575}
+  LeftHand: {fileID: 2064063031}
+  RightHand: {fileID: 1429967097}
+  Belt: {fileID: 1459196654}
 --- !u!1 &753528526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783392959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.536, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1831,13 +1851,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100470, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 165334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+    - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
+      value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114188, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
+      value: objects
+      objectReference: {fileID: 0}
+    - target: {fileID: 144230, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 144230, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_TagString
       value: hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 160596, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160596, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
+      value: hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 165334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
+      value: hand2
+      objectReference: {fileID: 0}
+    - target: {fileID: 171246, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 177230, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191996, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
@@ -1884,8 +1948,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000013428287994, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013428287994, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_TagString
-      value: hand
+      value: hand2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014277073068, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
@@ -2372,7 +2444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459196654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5360001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2494,8 +2566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spot: {fileID: 46620048}
   Weapon: {fileID: 1150539787}
-  triggerLeft: {fileID: 0}
-  triggerRight: {fileID: 0}
+  triggerLeft: {fileID: 1915941370}
+  triggerRight: {fileID: 58590575}
   LeftHand: {fileID: 2064063031}
   RightHand: {fileID: 1429967097}
   Belt: {fileID: 1459196654}
@@ -2523,7 +2595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676282669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.21400006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2545,6 +2617,7 @@ GameObject:
   - component: {fileID: 1676307477}
   - component: {fileID: 1676307476}
   - component: {fileID: 1676307475}
+  - component: {fileID: 1676307478}
   m_Layer: 0
   m_Name: Tazer Zone
   m_TagString: Untagged
@@ -2630,6 +2703,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676307473}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1676307478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676307473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2430270d5087270498b24a6db483d5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spot: {fileID: 482647105}
+  Weapon: {fileID: 1783721902}
+  triggerLeft: {fileID: 1915941370}
+  triggerRight: {fileID: 58590575}
+  LeftHand: {fileID: 2064063031}
+  RightHand: {fileID: 1429967097}
+  Belt: {fileID: 1459196654}
 --- !u!1 &1778016348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,7 +2967,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915941366}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.036958218

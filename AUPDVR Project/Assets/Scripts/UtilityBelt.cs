@@ -20,7 +20,7 @@ public class UtilityBelt : MonoBehaviour
     void Update()
     {
         CalculateAvgForwardVector();
-        belt.transform.forward = avgForwardVector;
+        transform.forward = avgForwardVector;
         transform.position = new Vector3(cameraObj.GetComponent<Camera>().transform.position.x, transform.position.y, cameraObj.GetComponent<Camera>().transform.position.z);
     }
 

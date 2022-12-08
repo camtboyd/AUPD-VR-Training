@@ -8,7 +8,6 @@ public class ButtonListener : MonoBehaviour {
     public SteamVR_Input_Sources handType;
     public bool isPressed;
 
-    private Vector3 _avgForwardVector;
 
     void Awake() {
 
@@ -30,12 +29,10 @@ public class ButtonListener : MonoBehaviour {
 
 
     private void TriggerUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
-        //Debug.Log("Trigger is Up");
         isPressed = false;
     }
 
     private void TriggerDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
-        //Debug.Log("Trigger is Down");
         isPressed = true;
     }
 

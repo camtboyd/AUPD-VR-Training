@@ -25,8 +25,10 @@ public class HandleCollsion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if((other.gameObject.tag == "hand") && (triggerLeft.isPressed == true) || (triggerRight.isPressed == true)) 
         {
+            Debug.Log(other.gameObject.tag);
             door.GetComponent<DoorInteraction>().OpenDoor();
             Debug.Log("Opening Door");
         }

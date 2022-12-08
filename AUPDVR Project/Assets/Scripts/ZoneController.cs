@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZoneController : MonoBehaviour
 {
+    //Serialized Field variables
     [SerializeField] private GameObject Spot;
     [SerializeField] private GameObject Weapon;
     [SerializeField] ButtonListener triggerLeft;
@@ -12,8 +13,11 @@ public class ZoneController : MonoBehaviour
     [SerializeField] GameObject RightHand;
     [SerializeField] GameObject Belt;
 
-    private bool grabbing = false;
-    private int hand = 0; //0 = left, 1 = right
+    //Non Serialized Field variables
+    private int hand = 0; //0 = right, 1 = left
+    private bool inZone = false;
+    private bool hasGun = false;
+    private float timer = 0f;
 
 
     // Start is called before the first frame update
@@ -25,41 +29,74 @@ public class ZoneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(grabbing) 
+        if(inZone && hasGun) 
         {
-            if(hand == 0) 
+            if(Time.time < timer + 1f) { return; }
+
+            if (triggerRight.isPressed == false) 
             {
-                if (triggerLeft.isPressed == false)
-                    DropWeapon(false);
+                DropWeapon(true);
+                hasGun = false;
+                timer = Time.time;
+            }
+            else if (triggerLeft.isPressed == false) 
+            {
+                DropWeapon(true);
+                hasGun = false;
+                timer = Time.time;
+            }
+        }
+
+        if (inZone && !hasGun) 
+        {
+            if (Time.time < timer + 1f) { return; }
+
+            if (triggerRight.isPressed == true && hand == 0) 
+            {
+                Weapon.transform.parent = RightHand.transform;
+                hasGun = true;
+                timer = Time.time;
             } 
-            else 
+            else if (triggerLeft.isPressed == true && hand == 1) 
             {
-                if (triggerRight.isPressed == false)
-                    DropWeapon(false);
+                Weapon.transform.parent = LeftHand.transform;
+                hasGun = true;
+                timer = Time.time;
+            } 
+        }
+
+        if (!inZone && hasGun) {
+            if (Time.time < timer + 1f) { return; }
+
+            if (triggerRight.isPressed == false) 
+            {
+                DropWeapon(true);
+                hasGun = false;
+                timer = Time.time;
             }
         }
     }
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (grabbing) 
+        if (other.gameObject.transform.parent.parent.gameObject.name == "HandColliderRight(Clone)") 
         {
-            DropWeapon(true);
-        } 
-        else 
-        {
-            if ((other.gameObject.tag == "hand") && (triggerLeft.isPressed == true)) {
-                Weapon.transform.parent = LeftHand.transform;
-                hand = 0;
-                grabbing = true;
-            } else if ((other.gameObject.tag == "hand") && (triggerRight.isPressed == true)) {
-                Debug.Log("here");
-                Weapon.transform.parent = RightHand.transform;
-                hand = 1;
-                grabbing = true;
-            }
+            hand = 0;
+            inZone = true;
         }
-        
+        else if(other.gameObject.transform.parent.parent.gameObject.name == "HandColliderLeft(Clone)") 
+        {
+            hand = 1;
+            inZone = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other) 
+    {
+        if (other.gameObject.name == "finger_pinky_2_r") 
+        {
+            inZone = false;
+        }
     }
 
     private void DropWeapon(bool b) 
@@ -75,6 +112,5 @@ public class ZoneController : MonoBehaviour
             Weapon.transform.parent = null;
             Weapon.GetComponent<Rigidbody>().useGravity = true;
         }
-        grabbing = false;
     }
 }
