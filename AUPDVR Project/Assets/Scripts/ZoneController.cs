@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ZoneController : MonoBehaviour
 {
     //Serialized Field variables
@@ -14,6 +15,7 @@ public class ZoneController : MonoBehaviour
     [SerializeField] GameObject Belt;
 
     //Non Serialized Field variables
+    
     private int hand = 0; //0 = right, 1 = left
     private bool inZone = false;
     private bool hasGun = false;
@@ -74,6 +76,11 @@ public class ZoneController : MonoBehaviour
                 hasGun = false;
                 timer = Time.time;
             }
+            else if (triggerLeft.isPressed == false) {
+                DropWeapon(true);
+                hasGun = false;
+                timer = Time.time;
+            }
         }
     }
 
@@ -99,7 +106,7 @@ public class ZoneController : MonoBehaviour
         }
     }
 
-    private void DropWeapon(bool b) 
+    public void DropWeapon(bool b) 
     {
         if(b) 
         {
@@ -113,4 +120,8 @@ public class ZoneController : MonoBehaviour
             Weapon.GetComponent<Rigidbody>().useGravity = true;
         }
     }
+
+
+
+
 }

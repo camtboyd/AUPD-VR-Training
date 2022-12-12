@@ -8,6 +8,7 @@ TagManager:
   - objects
   - player
   - hand2
+  - block
   layers:
   - Default
   - TransparentFX

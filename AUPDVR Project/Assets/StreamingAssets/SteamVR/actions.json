@@ -50,6 +50,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/Calibrate",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -102,10 +106,6 @@
     },
     {
       "name": "/actions/mixedreality",
-      "usage": "single"
-    },
-    {
-      "name": "/actions/NewSet",
       "usage": "single"
     },
     {
