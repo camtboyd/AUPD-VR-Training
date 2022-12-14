@@ -26,13 +26,15 @@ public class ZoneCalibrator : MonoBehaviour
 
     private void AButtonDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) 
     {
+        Debug.Log("Pressed A button...");
+
         zones[0].transform.position = RightHand.transform.position;
         zones[1].transform.position = LeftHand.transform.position;
+
         spots[0].transform.position = RightHand.transform.position;
         spots[1].transform.position = LeftHand.transform.position;
 
         zones[0].GetComponent<ZoneController>().DropWeapon(true);
         zones[1].GetComponent<ZoneController>().DropWeapon(true);
-
     }
 }

@@ -29,25 +29,16 @@ public class DoorInteraction : MonoBehaviour
         {
             if (IsOpen) 
             {
-                Debug.Log("Closing Door");
                 animator.ResetTrigger("ToOpen");
                 animator.SetTrigger("ToClose");
                 IsOpen = false;
             } 
             else if (!IsOpen) 
             {
-                Debug.Log("Opening Door");
                 animator.ResetTrigger("ToClose");
                 animator.SetTrigger("ToOpen");
                 IsOpen = true;
             }
-        }
-           
-        /*
-        Vector3 rotation = new Vector3(0, 0, -115);
-        door.transform.Rotate(rotation);
-        IsOpen = true;
-        */
+        }        
     }
-
 }

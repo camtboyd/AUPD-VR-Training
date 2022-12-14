@@ -9,6 +9,8 @@ TagManager:
   - player
   - hand2
   - block
+  - Taser
+  - Pistol
   layers:
   - Default
   - TransparentFX
