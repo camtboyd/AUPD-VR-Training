@@ -2,7 +2,7 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.aupdtestproject.exe",
+      "app_key": "application.generated.unity.aupdvrproject.exe",
       "launch_type": "url",
       "url": "steam://launch/",
       "action_manifest_path": "D:\\Users\\Cameron Boyd\\audpvr_dir\\AUPDVR Project\\Assets\\StreamingAssets\\SteamVR\\actions.json",

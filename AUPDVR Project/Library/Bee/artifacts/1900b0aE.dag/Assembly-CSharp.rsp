@@ -397,6 +397,7 @@
 "Assets/Scripts/TeleportationScript.cs"
 "Assets/Scripts/UtilityBelt.cs"
 "Assets/Scripts/WeaponProperties.cs"
+"Assets/Scripts/WeaponReference.cs"
 "Assets/Scripts/ZoneCalibrator.cs"
 "Assets/Scripts/ZoneController.cs"
 -langversion:9.0

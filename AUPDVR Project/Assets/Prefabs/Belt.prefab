@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3525918565220495668
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3525918565220495671}
-  m_Layer: 0
-  m_Name: Tazer Spot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3525918565220495671
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3525918565220495668}
-  m_LocalRotation: {x: -0, y: 0.18868592, z: -0, w: 0.9820375}
-  m_LocalPosition: {x: -0.251, y: -0.049999993, z: -0.044999853}
-  m_LocalScale: {x: 0.058726802, y: 0.2669187, z: 0.091273785}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3525918565986799029}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 21.752, z: 0}
 --- !u!1 &3525918565236834523
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,102 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &3525918565601486071
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3525918565601486070}
-  m_Layer: 0
-  m_Name: Spray Spot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3525918565601486070
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3525918565601486071}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.041, y: -0.06999999, z: 0.11599997}
-  m_LocalScale: {x: 0.088991076, y: 0.088991076, z: 0.088991076}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3525918565986799029}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3525918565656948965
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3525918565656948964}
-  m_Layer: 0
-  m_Name: Pistol Spot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3525918565656948964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3525918565656948965}
-  m_LocalRotation: {x: -0.59347695, y: 0.60706764, z: 0.39083642, w: -0.3556698}
-  m_LocalPosition: {x: 0.305, y: -0.096, z: -0.043}
-  m_LocalScale: {x: 0.4909199, y: 0.49091995, z: 0.49092}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3525918565986799029}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 183.002, y: 63.762, z: -270.57}
---- !u!1 &3525918565986799050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3525918565986799029}
-  m_Layer: 0
-  m_Name: Spots
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3525918565986799029
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3525918565986799050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.536, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3525918565656948964}
-  - {fileID: 3525918565220495671}
-  - {fileID: 3525918565601486070}
-  m_Father: {fileID: 3525918566568239211}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3525918566015043699
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,13 +207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2430270d5087270498b24a6db483d5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spot: {fileID: 3525918565601486071}
-  Weapon: {fileID: 3525918566513577768}
-  triggerLeft: {fileID: 0}
-  triggerRight: {fileID: 0}
-  LeftHand: {fileID: 0}
-  RightHand: {fileID: 0}
-  Belt: {fileID: 3525918566393135003}
+  trigger: {fileID: 0}
+  num: 0
 --- !u!1 &3525918566343536588
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +221,7 @@ GameObject:
   - component: {fileID: 3525918566343536584}
   - component: {fileID: 3525918566343536585}
   - component: {fileID: 3525918566343536590}
-  - component: {fileID: 3525918566343536587}
+  - component: {fileID: 5254879818208297896}
   m_Layer: 0
   m_Name: Pistol Zone
   m_TagString: Untagged
@@ -439,7 +307,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3525918566343536587
+--- !u!114 &5254879818208297896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,13 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2430270d5087270498b24a6db483d5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spot: {fileID: 3525918565656948965}
-  Weapon: {fileID: 458918845283285459}
-  triggerLeft: {fileID: 0}
-  triggerRight: {fileID: 0}
-  LeftHand: {fileID: 0}
-  RightHand: {fileID: 0}
-  Belt: {fileID: 3525918566393135003}
+  trigger: {fileID: 0}
+  num: 0
 --- !u!1 &3525918566393135003
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,12 +331,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3525918566393135002}
   m_Layer: 0
-  m_Name: Belt
+  m_Name: Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3525918566393135002
 Transform:
   m_ObjectHideFlags: 0
@@ -604,7 +467,7 @@ GameObject:
   - component: {fileID: 3525918566568239214}
   - component: {fileID: 3525918566568239210}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -624,7 +487,6 @@ Transform:
   m_Children:
   - {fileID: 3525918566393135002}
   - {fileID: 3525918567281370715}
-  - {fileID: 3525918565986799029}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -861,8 +723,8 @@ MonoBehaviour:
   - {fileID: 3525918566343536588}
   - {fileID: 3525918567281377636}
   spots:
-  - {fileID: 3525918565656948965}
-  - {fileID: 3525918565220495668}
+  - {fileID: 0}
+  - {fileID: 0}
   LeftHand: {fileID: 0}
   RightHand: {fileID: 0}
 --- !u!1 &3525918567281377636
@@ -975,13 +837,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2430270d5087270498b24a6db483d5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spot: {fileID: 3525918565220495668}
-  Weapon: {fileID: 3525918567125598939}
-  triggerLeft: {fileID: 0}
-  triggerRight: {fileID: 0}
-  LeftHand: {fileID: 0}
-  RightHand: {fileID: 0}
-  Belt: {fileID: 3525918566393135003}
+  trigger: {fileID: 0}
+  num: 1
 --- !u!1001 &3525918565573238751
 PrefabInstance:
   m_ObjectHideFlags: 0

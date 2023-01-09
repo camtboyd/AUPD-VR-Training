@@ -39,7 +39,5 @@ public class UtilityBelt : MonoBehaviour
         _avgForwardVector.x = x;
         _avgForwardVector.y = transform.forward.y;
         _avgForwardVector.z = z;
-
-
     }
 }

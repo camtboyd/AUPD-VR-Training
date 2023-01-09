@@ -10,6 +10,8 @@ TagManager:
   - hand2
   - block
   - Taser
+  - PistolZone
+  - TaserZone
   - Pistol
   layers:
   - Default
