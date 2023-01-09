@@ -14,7 +14,6 @@ public class ZoneCalibrator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("HELLO?");
         grabAction.AddOnStateDownListener(AButtonDown, handType);
     }
 
@@ -26,8 +25,6 @@ public class ZoneCalibrator : MonoBehaviour
 
     private void AButtonDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) 
     {
-        Debug.Log("Pressed A button...");
-
         zones[0].transform.position = RightHand.transform.position;
         zones[1].transform.position = LeftHand.transform.position;
 

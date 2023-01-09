@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     [SerializeField] private GameObject playerObj;
+    [SerializeField] private GameObject belt;
 
     public void LoadingScene()
     {
@@ -14,8 +15,6 @@ public class SceneChange : MonoBehaviour
     public void GameScene()
     {
         SceneManager.LoadScene("GameScene");
-        //SceneManager.MoveGameObjectToScene(playerObj, SceneManager.GetSceneByName("GameScene"));
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("GameScene"));
-        //playerObj.transform.position; 
+        DontDestroyOnLoad(belt);        
     }
 }

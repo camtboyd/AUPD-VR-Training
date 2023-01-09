@@ -18,7 +18,8 @@ public class ZoneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            
+        DropWeapon();
+        hasGun = false;
     }
 
     // Update is called once per frame
@@ -49,7 +50,6 @@ public class ZoneController : MonoBehaviour
         if (mode == 0 && other.gameObject.transform.parent.parent.gameObject.name == "HandColliderRight(Clone)") 
         {
             inZone = true;
-            Debug.Log("In Zone..");
         }
         else if(mode == 1 && other.gameObject.transform.parent.parent.gameObject.name == "HandColliderLeft(Clone)") 
         {
@@ -61,7 +61,6 @@ public class ZoneController : MonoBehaviour
     {
         if (other.gameObject.transform.parent.parent.gameObject.name == "HandColliderRight(Clone)" || other.gameObject.transform.parent.parent.gameObject.name == "HandColliderLeft(Clone)")
         {
-            Debug.Log("Left Zone...");
             inZone = false;
         }
     }
