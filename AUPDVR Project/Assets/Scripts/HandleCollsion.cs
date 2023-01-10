@@ -13,6 +13,12 @@ public class HandleCollsion : MonoBehaviour
     private bool InZone = false;
 
 
+    private void OnEnable() 
+    {
+        //SceneChange.OnChange += SetVars();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +29,11 @@ public class HandleCollsion : MonoBehaviour
     void Update()
     {
         OpenDoor();
+    }
+
+    void SetVars() 
+    {
+
     }
 
 

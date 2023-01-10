@@ -13,6 +13,7 @@ TagManager:
   - PistolZone
   - TaserZone
   - Pistol
+  - floor
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,11 @@ public class SceneChange : MonoBehaviour
     [SerializeField] private GameObject playerObj;
     [SerializeField] private GameObject belt;
 
+
+    public delegate void ChangeScene();
+    public static event ChangeScene OnChange;
+
+
     public void LoadingScene()
     {
         SceneManager.LoadScene("LoadingScene");
@@ -15,6 +20,7 @@ public class SceneChange : MonoBehaviour
     public void GameScene()
     {
         SceneManager.LoadScene("GameScene");
-        DontDestroyOnLoad(belt);        
+        DontDestroyOnLoad(belt);
+        OnChange();
     }
 }

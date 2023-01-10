@@ -7,7 +7,7 @@ public class DoorInteraction : MonoBehaviour
 
     [SerializeField] private GameObject door;
     [SerializeField] private Animator animator;
-    private bool IsOpen = false;
+    public bool IsOpen = false;
     private float timer = 0f;
 
 
@@ -23,6 +23,7 @@ public class DoorInteraction : MonoBehaviour
         
     }
 
+    /*
     public void OpenDoor() 
     {
         if(Time.time > timer+2f) 
@@ -40,5 +41,11 @@ public class DoorInteraction : MonoBehaviour
                 IsOpen = true;
             }
         }        
+    }
+    */
+
+    public void OpenDoor() {
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + -20f);
+        IsOpen = true;
     }
 }
